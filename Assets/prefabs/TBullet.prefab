@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 2124102252857333188}
   - component: {fileID: 2396404570874612051}
   - component: {fileID: -8563318356876507008}
+  - component: {fileID: 2057407843999176373}
   - component: {fileID: 6458057784000078169}
   m_Layer: 0
   m_Name: TBullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +99,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6790be7533aaf104eacce4db65a51316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretParent: {fileID: 0}
+--- !u!50 &2057407843999176373
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3482747951570611138}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &6458057784000078169
 CircleCollider2D:
   m_ObjectHideFlags: 0
