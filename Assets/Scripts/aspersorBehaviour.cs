@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class aspersorBehaviour : MonoBehaviour
 {
+    [Header("Turret Stats")]
+    public float life;
+    public float maintenanceCost;
+    public bool isDamaged;
+    public float damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +19,14 @@ public class aspersorBehaviour : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            Debug.Log("hi");
+            Destroy(this.gameObject);
+        }
     }
 }
