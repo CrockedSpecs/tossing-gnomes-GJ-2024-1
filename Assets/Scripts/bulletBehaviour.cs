@@ -48,11 +48,11 @@ public class bulletBehaviour : MonoBehaviour
         }
     }
 
-    //private void onTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.CompareTag("Enemy"))
-    //    {
-    //        Destroy(this.gameObject);
-    //    }
-    //}
+    private void onTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

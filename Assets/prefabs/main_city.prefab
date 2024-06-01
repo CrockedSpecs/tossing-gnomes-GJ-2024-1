@@ -113,5 +113,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceManager: {fileID: 5041992765272403341}
   waterGenerated: 20
-  timeInterval: 15
-  initialTime: 0
+  timeInterval: 5
+  initialTime: 3
