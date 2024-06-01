@@ -123,164 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &137904821
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 137904823}
-  - component: {fileID: 137904822}
-  m_Layer: 0
-  m_Name: SpawnPoint(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &137904822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 137904821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53345c1292f714a43b470d9652dbcd1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HordesManagement:
-    _serializedList:
-    - Key: 0
-      Value:
-      - enemiesEnum: 0
-        NumberOfEnemies: 3
-      - enemiesEnum: 1
-        NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
-    - Key: 1
-      Value:
-      - enemiesEnum: 0
-        NumberOfEnemies: 3
-      - enemiesEnum: 1
-        NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
-    - Key: 2
-      Value:
-      - enemiesEnum: 0
-        NumberOfEnemies: 3
-      - enemiesEnum: 1
-        NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
-  spawnInterval: 0.5
-  spawnIntervalBetweenHordes: 3
-  enemyAbstractClass: {fileID: 4243643840155893733, guid: 4544f3e5f4f2f4a4d82f147bc019cf4b, type: 3}
---- !u!4 &137904823
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 137904821}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.000000119209275}
-  m_LocalPosition: {x: 0.00000011920935, y: 0, z: 5.000001}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 223489282}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &194792836
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 194792838}
-  - component: {fileID: 194792837}
-  m_Layer: 0
-  m_Name: SpawnPoint(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &194792837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194792836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53345c1292f714a43b470d9652dbcd1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HordesManagement:
-    _serializedList:
-    - Key: 0
-      Value:
-      - enemiesEnum: 0
-        NumberOfEnemies: 3
-      - enemiesEnum: 1
-        NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
-    - Key: 1
-      Value:
-      - enemiesEnum: 0
-        NumberOfEnemies: 3
-      - enemiesEnum: 1
-        NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
-    - Key: 2
-      Value:
-      - enemiesEnum: 0
-        NumberOfEnemies: 3
-      - enemiesEnum: 1
-        NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
-  spawnInterval: 0.5
-  spawnIntervalBetweenHordes: 3
-  enemyAbstractClass: {fileID: 4243643840155893733, guid: 4544f3e5f4f2f4a4d82f147bc019cf4b, type: 3}
---- !u!4 &194792838
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194792836}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.3826833, z: 0, w: -0.9238796}
-  m_LocalPosition: {x: 0.00000092387205, y: 3.5355341, z: -3.5355346}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 223489282}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &223489280
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 223489282}
   - component: {fileID: 223489281}
+  - component: {fileID: 223489283}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -311,36 +154,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPointPrefab: {fileID: 7478861309811857242, guid: 4342e05f22909704db481093a3863d4b, type: 3}
-  existingFields: 7
+  existingFields: 1
   spawnPointNumber: 1
-  assumption: 8
+  assumption: 2
   distance: 5
   spawnPoints:
-  - {fileID: 137904821}
-  - {fileID: 1305153701}
-  - {fileID: 617777622}
-  - {fileID: 639040598}
-  - {fileID: 660364628}
-  - {fileID: 194792836}
-  - {fileID: 1245257717}
+  - {fileID: 1068424988}
   positionsList:
   - {x: 5.0000005, y: 0, z: -0.00000059604645}
   - {x: -5.0000005, y: -0.00000043711393, z: -0.00000059604645}
-  - {x: 0, y: 5, z: 0}
-  - {x: 0, y: -5, z: 0}
-  - {x: 3.5355341, y: 3.5355344, z: -0.00000059604645}
-  - {x: -3.5355341, y: 3.5355341, z: -0.00000044703484}
-  - {x: -3.5355341, y: -3.5355349, z: -0.00000074505806}
-  - {x: 3.5355353, y: -3.5355332, z: -0.00000052154064}
   anglesList:
   - {x: 0, y: 0.70710677, z: 0, w: -0.7071069}
   - {x: 0, y: -0.7071069, z: 0, w: -0.70710677}
-  - {x: 0, y: 0, z: 0, w: -1}
-  - {x: 0, y: -1, z: 0, w: 0.0000001685874}
-  - {x: 0, y: 0.38268337, z: 0, w: -0.9238796}
-  - {x: 0, y: -0.38268363, z: 0, w: -0.92387956}
-  - {x: 0, y: -0.92387956, z: 0, w: -0.38268346}
-  - {x: 0, y: -0.9238795, z: 0, w: 0.38268378}
 --- !u!4 &223489282
 Transform:
   m_ObjectHideFlags: 0
@@ -354,15 +179,25 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 137904823}
-  - {fileID: 1305153703}
-  - {fileID: 617777624}
-  - {fileID: 639040600}
-  - {fileID: 660364630}
-  - {fileID: 194792838}
-  - {fileID: 1245257719}
+  - {fileID: 1068424990}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &223489283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223489280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38273a9f0f533fe468e4c89ec9f7e524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPooling:
+    _serializedList: []
+  objectPoolingInUse:
+    _serializedList: []
 --- !u!1 &487113527
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,85 +456,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &617777622
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 617777624}
-  - component: {fileID: 617777623}
-  m_Layer: 0
-  m_Name: SpawnPoint(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &617777623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617777622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53345c1292f714a43b470d9652dbcd1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HordesManagement:
-    _serializedList:
-    - Key: 0
-      Value:
-      - enemiesEnum: 0
-        NumberOfEnemies: 3
-      - enemiesEnum: 1
-        NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
-    - Key: 1
-      Value:
-      - enemiesEnum: 0
-        NumberOfEnemies: 3
-      - enemiesEnum: 1
-        NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
-    - Key: 2
-      Value:
-      - enemiesEnum: 0
-        NumberOfEnemies: 3
-      - enemiesEnum: 1
-        NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
-  spawnInterval: 0.5
-  spawnIntervalBetweenHordes: 3
-  enemyAbstractClass: {fileID: 4243643840155893733, guid: 4544f3e5f4f2f4a4d82f147bc019cf4b, type: 3}
---- !u!4 &617777624
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617777622}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 223489282}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,7 +538,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &639040598
+--- !u!1 &1068424988
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -790,8 +546,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 639040600}
-  - component: {fileID: 639040599}
+  - component: {fileID: 1068424990}
+  - component: {fileID: 1068424989}
   m_Layer: 0
   m_Name: SpawnPoint(Clone)
   m_TagString: Untagged
@@ -799,13 +555,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &639040599
+--- !u!114 &1068424989
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639040598}
+  m_GameObject: {fileID: 1068424988}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53345c1292f714a43b470d9652dbcd1b, type: 3}
@@ -819,280 +575,31 @@ MonoBehaviour:
         NumberOfEnemies: 3
       - enemiesEnum: 1
         NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
     - Key: 1
       Value:
       - enemiesEnum: 0
         NumberOfEnemies: 3
       - enemiesEnum: 1
         NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
     - Key: 2
       Value:
       - enemiesEnum: 0
         NumberOfEnemies: 3
       - enemiesEnum: 1
         NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
-  spawnInterval: 0.5
-  spawnIntervalBetweenHordes: 3
-  enemyAbstractClass: {fileID: 4243643840155893733, guid: 4544f3e5f4f2f4a4d82f147bc019cf4b, type: 3}
---- !u!4 &639040600
+  spawnInterval: 0.4
+  spawnIntervalBetweenHordes: 2
+  enemyAbstractClass: {fileID: 0}
+--- !u!4 &1068424990
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639040598}
+  m_GameObject: {fileID: 1068424988}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.70710695, z: -0, w: -0.7071067}
-  m_LocalPosition: {x: 0, y: -5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 223489282}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &660364628
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 660364630}
-  - component: {fileID: 660364629}
-  m_Layer: 0
-  m_Name: SpawnPoint(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &660364629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660364628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53345c1292f714a43b470d9652dbcd1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HordesManagement:
-    _serializedList:
-    - Key: 0
-      Value:
-      - enemiesEnum: 0
-        NumberOfEnemies: 3
-      - enemiesEnum: 1
-        NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
-    - Key: 1
-      Value:
-      - enemiesEnum: 0
-        NumberOfEnemies: 3
-      - enemiesEnum: 1
-        NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
-    - Key: 2
-      Value:
-      - enemiesEnum: 0
-        NumberOfEnemies: 3
-      - enemiesEnum: 1
-        NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
-  spawnInterval: 0.5
-  spawnIntervalBetweenHordes: 3
-  enemyAbstractClass: {fileID: 4243643840155893733, guid: 4544f3e5f4f2f4a4d82f147bc019cf4b, type: 3}
---- !u!4 &660364630
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660364628}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9238795, z: -0, w: -0.3826835}
-  m_LocalPosition: {x: 0.00000011920935, y: 3.5355344, z: 3.5355346}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 223489282}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1245257717
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1245257719}
-  - component: {fileID: 1245257718}
-  m_Layer: 0
-  m_Name: SpawnPoint(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1245257718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245257717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53345c1292f714a43b470d9652dbcd1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HordesManagement:
-    _serializedList:
-    - Key: 0
-      Value:
-      - enemiesEnum: 0
-        NumberOfEnemies: 3
-      - enemiesEnum: 1
-        NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
-    - Key: 1
-      Value:
-      - enemiesEnum: 0
-        NumberOfEnemies: 3
-      - enemiesEnum: 1
-        NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
-    - Key: 2
-      Value:
-      - enemiesEnum: 0
-        NumberOfEnemies: 3
-      - enemiesEnum: 1
-        NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
-  spawnInterval: 0.5
-  spawnIntervalBetweenHordes: 3
-  enemyAbstractClass: {fileID: 4243643840155893733, guid: 4544f3e5f4f2f4a4d82f147bc019cf4b, type: 3}
---- !u!4 &1245257719
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245257717}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.38268343, z: 0, w: -0.9238795}
-  m_LocalPosition: {x: 0.0000012218953, y: -3.5355349, z: -3.5355346}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 223489282}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1305153701
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1305153703}
-  - component: {fileID: 1305153702}
-  m_Layer: 0
-  m_Name: SpawnPoint(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1305153702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1305153701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53345c1292f714a43b470d9652dbcd1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HordesManagement:
-    _serializedList:
-    - Key: 0
-      Value:
-      - enemiesEnum: 0
-        NumberOfEnemies: 3
-      - enemiesEnum: 1
-        NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
-    - Key: 1
-      Value:
-      - enemiesEnum: 0
-        NumberOfEnemies: 3
-      - enemiesEnum: 1
-        NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
-    - Key: 2
-      Value:
-      - enemiesEnum: 0
-        NumberOfEnemies: 3
-      - enemiesEnum: 1
-        NumberOfEnemies: 2
-      - enemiesEnum: 2
-        NumberOfEnemies: 4
-      - enemiesEnum: 0
-        NumberOfEnemies: 1
-  spawnInterval: 0.5
-  spawnIntervalBetweenHordes: 3
-  enemyAbstractClass: {fileID: 4243643840155893733, guid: 4544f3e5f4f2f4a4d82f147bc019cf4b, type: 3}
---- !u!4 &1305153703
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1305153701}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.000000119209275, z: 0, w: -1}
-  m_LocalPosition: {x: 0.0000010728836, y: -0.00000043711393, z: -5.000001}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.000000119209275}
+  m_LocalPosition: {x: 0.00000011920935, y: 0, z: 5.000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
