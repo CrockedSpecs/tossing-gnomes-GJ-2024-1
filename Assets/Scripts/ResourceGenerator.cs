@@ -24,19 +24,21 @@ public class ResourceGenerator : MonoBehaviour
         if (justCreated)
         {
             yield return new WaitForSeconds(initialTime);
-            Collect(Mathf.CeilToInt(waterGenerated / 2f));
+            Collect(Mathf.CeilToInt(waterGenerated / 2f));;
             justCreated = false;
         }
         //luego, cada timeInterval se generan los recursos completos
-        while (true && !justCreated)
+        while (!justCreated)
         {
             yield return new WaitForSeconds(timeInterval);
             Collect(waterGenerated);
+            
         }
     }
 
     void Collect(int amount)
     {
         resourceManager.WaterResources += amount;
+        Debug.Log(resourceManager.WaterResources);
     }
 }
