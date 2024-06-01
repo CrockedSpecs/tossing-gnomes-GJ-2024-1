@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyAbstractClass : MonoBehaviour
 {
@@ -11,21 +12,24 @@ public class EnemyAbstractClass : MonoBehaviour
     [SerializeField] int bUMaxLife;
     [SerializeField] int bULife;
 
-    [SerializeField] float speed = 1.0f; // Velocidad de movimiento
+    [SerializeField] SpawnPoint spawnPoint;
 
-    private float startTime;
-    private float journeyLength;
+    //[SerializeField] float speed = 1.0f; // Velocidad de movimiento
+
+    [SerializeField] NavMeshAgent agent;
+
 
     public int MaxLife { get => maxLife; set => maxLife = value; }
     public int Life { get => life; set => life = value; }
     public int BUMaxLife { get => bUMaxLife; set => bUMaxLife = value; }
     public int BULife { get => bULife; set => bULife = value; }
     public EnemiesEnum EnemyType { get => enemyType; set => enemyType = value; }
+    public SpawnPoint SpawnPoint { get => spawnPoint; set => spawnPoint = value; }
 
     void Start()
     {
-        startTime = Time.time;
-        journeyLength = Vector3.Distance(this.transform.position, Vector3.zero);
+        agent.SetDestination((Vector2)spawnPoint
+            .TargetToDestroy1.transform.position);
         BUMaxLife = MaxLife;
         BULife = Life;
     }
@@ -50,20 +54,19 @@ public class EnemyAbstractClass : MonoBehaviour
 
     void Update()
     {
-        if (true)
+        if (!agent.hasPath)
         {
-            
-        }
-        float distCovered = (Time.time - startTime) * speed;
-        float fractionOfJourney = distCovered / journeyLength;
-        transform.position = Vector3
-            .Lerp(this.transform.position
-            , Vector3.zero, fractionOfJourney);
-
-        if (Life <= 0)
-        {
-            this.gameObject.SetActive(false);   
+            if ((Vector2)agent.transform.position != (Vector2)spawnPoint
+                .TargetToDestroy1.transform.position)
+            {
+                agent.SetDestination((Vector2)spawnPoint
+                .TargetToDestroy1.transform.position);
+            }
+            if (Life <= 0)
+            {
+                this.gameObject.SetActive(false);
+            }
         }
     }
-
+    
 }

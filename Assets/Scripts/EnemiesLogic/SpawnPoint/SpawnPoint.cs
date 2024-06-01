@@ -22,6 +22,9 @@ public class SpawnPoint : MonoBehaviour
 
     [SerializeField] GameObject TargetToDestroy;
 
+
+    public GameObject TargetToDestroy1 { get => TargetToDestroy; set => TargetToDestroy = value; }
+
     private void Awake()
     {
 
@@ -34,17 +37,23 @@ public class SpawnPoint : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (TargetToDestroy == null || !TargetToDestroy
+        if (TargetToDestroy1 == null || !TargetToDestroy1
             .activeInHierarchy)
         {
-            Vector3 direction = 
-                Vector3.zero - this.transform.position;
-            RaycastHit hit;
-            if (Physics.Raycast(this.transform.position, direction, out hit, direction.magnitude, layer))
-            {
-                // Si el rayo golpea un objeto en la capa especificada, guarda el GameObject en la variable
-                TargetToDestroy = hit.collider.gameObject;
-            }
+            // Si el rayo golpea un objeto en la capa especificada, guarda el GameObject en la variablet;
+            Vector2 direction = 
+                Vector2.zero - (Vector2)this
+                .transform.position;
+            RaycastHit2D hit = Physics2D
+                .Raycast((Vector2)this.transform.position
+                , direction
+                , direction.magnitude
+                , layer);
+            Debug.DrawRay((Vector2)this.transform.position, direction, Color.blue);
+            TargetToDestroy1 = hit.collider.gameObject;
+
+
+            
         }
     }
 
@@ -104,6 +113,10 @@ public class SpawnPoint : MonoBehaviour
                                 .GetComponent
                                 <EnemyAbstractClass>()
                                 .EnemyType = item.enemiesEnum;
+                            enemyAbstractClass
+                                .GetComponent
+                                <EnemyAbstractClass>()
+                                .SpawnPoint = this;
                             EnemyObjectPooling
                             .sharedInstanceEnemyObjectPooling
                             .objectPoolingInUse[item.enemiesEnum
@@ -133,6 +146,11 @@ public class SpawnPoint : MonoBehaviour
                         .objectPooling.Add
                         (item.enemiesEnum.ToString()
                         , new List<GameObject>());
+
+                        enemyAbstractClass
+                                .GetComponent
+                                <EnemyAbstractClass>()
+                                .SpawnPoint = this;
 
                         EnemyObjectPooling
                         .sharedInstanceEnemyObjectPooling
