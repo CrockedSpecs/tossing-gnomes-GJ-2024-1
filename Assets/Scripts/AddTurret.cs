@@ -34,22 +34,26 @@ public class AddTurret : MonoBehaviour
 
     private void OnMouseDown()
     {
-        // Si no se está arrastrando, instanciar el blueprint en la posición del ratón
-        if (!isDragging)
+        if (createValue >= ResourceManager.Instance.WaterResources)
         {
-            // Instanciar el prefab de la torreta
-            blueprint = Instantiate(turret, Vector3.zero, Quaternion.identity);
-
-            // Añadir el componente SetFixed al blueprint para manejar su fijación
-            blueprint.AddComponent<SetFixed>();
-
-            // Configurar el color del blueprint como semi-transparente
-            SpriteRenderer spriteRenderer = blueprint.GetComponent<SpriteRenderer>();
-            if (spriteRenderer != null)
+            if (!isDragging)
             {
-                Color color = spriteRenderer.color;
-                color.a = 0.5f; // Hacer semi-transparente
-                spriteRenderer.color = color;
+                // Instanciar el prefab de la torreta
+                blueprint = Instantiate(turret, Vector3.zero, Quaternion.identity);
+
+                // Añadir el componente SetFixed al blueprint para manejar su fijación
+                blueprint.AddComponent<SetFixed>();
+
+                // Configurar el color del blueprint como semi-transparente
+                SpriteRenderer spriteRenderer = blueprint.GetComponent<SpriteRenderer>();
+                if (spriteRenderer != null)
+                {
+                    Color color = spriteRenderer.color;
+                    color.a = 0.5f; // Hacer semi-transparente
+                    spriteRenderer.color = color;
+                    
+                }
+                ResourceManager.Instance.WaterResources -= createValue;
             }
         }
     }
