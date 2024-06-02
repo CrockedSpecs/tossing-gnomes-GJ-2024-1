@@ -12,12 +12,20 @@ public class EnemyAbstractClass : MonoBehaviour
     [SerializeField] int bUMaxLife;
     [SerializeField] int bULife;
 
+    [SerializeField] int shootRate;
+
     [SerializeField] SpawnPoint spawnPoint;
 
     //[SerializeField] float speed = 1.0f; // Velocidad de movimiento
 
     [SerializeField] NavMeshAgent agent;
 
+    [SerializeField] GameObject target;
+
+    public float speed = 1.0f; // Velocidad de movimiento
+    private float startTime;
+    private float journeyLength;
+    private bool initiate = false;
 
     public int MaxLife { get => maxLife; set => maxLife = value; }
     public int Life { get => life; set => life = value; }
@@ -28,14 +36,22 @@ public class EnemyAbstractClass : MonoBehaviour
 
     void Start()
     {
-        agent.SetDestination((Vector2)spawnPoint
-            .TargetToDestroy1.transform.position);
+        //target = spawnPoint.TargetToDestroy1;
+        //agent.SetDestination(new Vector2 
+        //    (target
+        //    .transform.position.x 
+        //    , target
+        //    .transform.position.y));
+        StartCoroutine(WaitAndPrint());
+
+
+
         BUMaxLife = MaxLife;
         BULife = Life;
     }
     private void OnEnable()
     {
-        MaxLife =BUMaxLife;
+        MaxLife = BUMaxLife;
         Life = BULife;
     }
     private void OnDisable()
@@ -52,21 +68,66 @@ public class EnemyAbstractClass : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (!agent.hasPath)
+        // Calcula la fracción del viaje completada
+        if (spawnPoint.TargetToDestroy1 != null)
         {
-            if ((Vector2)agent.transform.position != (Vector2)spawnPoint
-                .TargetToDestroy1.transform.position)
+            if (initiate)
             {
-                agent.SetDestination((Vector2)spawnPoint
-                .TargetToDestroy1.transform.position);
-            }
-            if (Life <= 0)
-            {
-                this.gameObject.SetActive(false);
+                target = spawnPoint.TargetToDestroy1;
+
+                float distCovered = (Time.time - startTime) * speed;
+                float fractionOfJourney = distCovered / journeyLength;
+
+                // Mueve el GameObject de punto A a punto B
+                transform.position = Vector3.Lerp
+                    (this.transform
+                    .position
+                    , new Vector2(spawnPoint.TargetToDestroy1
+                    .transform.position.x + 0.5f
+                    , spawnPoint.TargetToDestroy1
+                    .transform.position.y)
+                    , fractionOfJourney);
             }
         }
+
     }
-    
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Defensa"))
+    //    {
+    //        agent.isStopped = true;
+    //    }
+    //}
+
+    IEnumerator WaitAndPrint()
+    {
+        // Espera 5 segundos
+        yield return new WaitForSeconds(2);
+
+        startTime = Time.time;
+        journeyLength = Vector3.Distance
+            (this.transform.position
+            , spawnPoint.TargetToDestroy1
+            .transform.position)
+            * 0.5f;
+        initiate = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Defensa"))
+        {
+            StartCoroutine(ShootBullet(collision));
+        }
+    }
+
+    IEnumerator ShootBullet(Collider2D collision)
+    {
+        yield return new WaitForSeconds(shootRate);
+            collision.transform.gameObject
+            .GetComponent<RangeOfDamage>().Father
+            .GetComponent<turretBehaviour>().life--;
+    }
 }
