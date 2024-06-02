@@ -7,6 +7,8 @@ public class AddTurret : MonoBehaviour
     public GameObject turret; // Prefab de la torreta que se añadirá
     public GameObject blueprint; // Instancia de la torreta en modo blueprint (semi-transparente)
 
+    public int createValue;
+
     private Vector3 mousePosition;
     public bool isDragging = false;
     public bool isBlueprint = true;

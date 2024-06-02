@@ -1,19 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ResourceManager : MonoBehaviour
 {
-    public int WaterResources;
-    // Start is called before the first frame update
-    void Start()
-    {
-        WaterResources = 0;
-    }
+    // Static instance of ResourceManager which allows it to be accessed by any other script.
+    public static ResourceManager Instance { get; private set; }
 
-    // Update is called once per frame
-    void Update()
+    // Variable to store resources
+    public int WaterResources;
+
+    // Awake is called when the script instance is being loaded
+    void Awake()
     {
-        //Debug.Log(WaterResources);
+        // If there is already an instance of ResourceManager, destroy the new one
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            // Make this the singleton instance
+            Instance = this;
+            // Set this to not be destroyed when reloading scene
+            DontDestroyOnLoad(gameObject);
+        }
     }
 }

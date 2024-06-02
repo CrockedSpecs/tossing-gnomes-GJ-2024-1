@@ -1,11 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ResourceGenerator : MonoBehaviour
 {
-    public ResourceManager resourceManager;
     public int waterGenerated;
     public float timeInterval;
     public float initialTime;
@@ -20,25 +18,24 @@ public class ResourceGenerator : MonoBehaviour
 
     IEnumerator CollectResource()
     {
-        //en un inicio genera la mitad de los recursos instnaciados en el inspector tras el initialTime
+        // Initially generate half of the resources specified in the inspector after the initialTime
         if (justCreated)
         {
             yield return new WaitForSeconds(initialTime);
-            Collect(Mathf.CeilToInt(waterGenerated / 2f));;
+            Collect(Mathf.CeilToInt(waterGenerated / 2f));
             justCreated = false;
         }
-        //luego, cada timeInterval se generan los recursos completos
+        // Then, generate the full amount of resources every timeInterval
         while (!justCreated)
         {
             yield return new WaitForSeconds(timeInterval);
             Collect(waterGenerated);
-            
         }
     }
 
     void Collect(int amount)
     {
-        resourceManager.WaterResources += amount;
-        Debug.Log(resourceManager.WaterResources);
+        ResourceManager.Instance.WaterResources += amount;
+        Debug.Log(ResourceManager.Instance.WaterResources);
     }
 }
