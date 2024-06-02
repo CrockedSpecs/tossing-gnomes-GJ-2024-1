@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class AddTurret : MonoBehaviour
 {
     public GameObject turret; // Prefab de la torreta que se añadirá
@@ -12,6 +12,8 @@ public class AddTurret : MonoBehaviour
     private Vector3 mousePosition;
     public bool isDragging = false;
     public bool isBlueprint = true;
+
+    [SerializeField]int buttonNumber;
 
     private void Start()
     {
@@ -34,12 +36,18 @@ public class AddTurret : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (createValue >= ResourceManager.Instance.WaterResources)
+        // Si no se está arrastrando, instanciar el blueprint en la posición del ratón
+        
+        if (!isDragging)
         {
-            if (!isDragging)
-            {
-                // Instanciar el prefab de la torreta
-                blueprint = Instantiate(turret, Vector3.zero, Quaternion.identity);
+            // Instanciar el prefab de la torreta
+            blueprint = Instantiate(turret, Vector3.zero, Quaternion.identity);
+        ChangeButtonToTorret
+                .sharedInstanceChangeButtonToTorret
+                .buttonNumber = buttonNumber;
+            ChangeButtonToTorret
+                .sharedInstanceChangeButtonToTorret
+                .punto = blueprint;
 
                 // Añadir el componente SetFixed al blueprint para manejar su fijación
                 blueprint.AddComponent<SetFixed>();
@@ -54,7 +62,6 @@ public class AddTurret : MonoBehaviour
                     
                 }
                 ResourceManager.Instance.WaterResources -= createValue;
-            }
         }
     }
 }

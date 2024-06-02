@@ -1,0 +1,1205 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &495522461577808466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1285624941836573599}
+  - component: {fileID: 3598497153926341230}
+  - component: {fileID: 2584267635714727871}
+  - component: {fileID: 5612240375658151651}
+  m_Layer: 0
+  m_Name: SpawnPoint(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1285624941836573599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495522461577808466}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.9238796, z: -0, w: -0.3826831}
+  m_LocalPosition: {x: 0.00000029802334, y: -8.48528, z: 8.485286}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 579101628372562371}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3598497153926341230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495522461577808466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53345c1292f714a43b470d9652dbcd1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer:
+    serializedVersion: 2
+    m_Bits: 0
+  HordesManagement:
+    _serializedList:
+    - Key: 0
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+    - Key: 1
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+    - Key: 2
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+  spawnInterval: 0.5
+  spawnIntervalBetweenHordes: 7
+  enemyAbstractClass: {fileID: 4243643840155893733, guid: 4544f3e5f4f2f4a4d82f147bc019cf4b, type: 3}
+  TargetToDestroy: {fileID: 0}
+--- !u!50 &2584267635714727871
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495522461577808466}
+  m_BodyType: 1
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &5612240375658151651
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495522461577808466}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!1 &1081534811430020804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3369679667090701979}
+  - component: {fileID: 6323941039287094692}
+  - component: {fileID: 3010650746020770210}
+  - component: {fileID: 5579417606624293668}
+  m_Layer: 0
+  m_Name: SpawnPoint(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3369679667090701979
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081534811430020804}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.38268343, z: 0, w: -0.9238795}
+  m_LocalPosition: {x: 0.000002741814, y: -8.485283, z: -8.485283}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 579101628372562371}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6323941039287094692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081534811430020804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53345c1292f714a43b470d9652dbcd1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer:
+    serializedVersion: 2
+    m_Bits: 0
+  HordesManagement:
+    _serializedList:
+    - Key: 0
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+    - Key: 1
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+    - Key: 2
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+  spawnInterval: 0.5
+  spawnIntervalBetweenHordes: 7
+  enemyAbstractClass: {fileID: 4243643840155893733, guid: 4544f3e5f4f2f4a4d82f147bc019cf4b, type: 3}
+  TargetToDestroy: {fileID: 0}
+--- !u!50 &3010650746020770210
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081534811430020804}
+  m_BodyType: 1
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &5579417606624293668
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081534811430020804}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!1 &1272627318654821501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4601544029094061353}
+  - component: {fileID: 4878558127803062723}
+  - component: {fileID: 2256027950262762074}
+  - component: {fileID: 2405730309862989526}
+  m_Layer: 0
+  m_Name: SpawnPoint(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4601544029094061353
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272627318654821501}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.9238795, z: -0, w: -0.3826835}
+  m_LocalPosition: {x: 0.0000004768374, y: 8.485283, z: 8.485283}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 579101628372562371}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4878558127803062723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272627318654821501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53345c1292f714a43b470d9652dbcd1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer:
+    serializedVersion: 2
+    m_Bits: 0
+  HordesManagement:
+    _serializedList:
+    - Key: 0
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+    - Key: 1
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+    - Key: 2
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+  spawnInterval: 0.5
+  spawnIntervalBetweenHordes: 7
+  enemyAbstractClass: {fileID: 4243643840155893733, guid: 4544f3e5f4f2f4a4d82f147bc019cf4b, type: 3}
+  TargetToDestroy: {fileID: 0}
+--- !u!50 &2256027950262762074
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272627318654821501}
+  m_BodyType: 1
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &2405730309862989526
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272627318654821501}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!1 &2794473897625555781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4738592891185217088}
+  - component: {fileID: 5165080024250857441}
+  m_Layer: 0
+  m_Name: SpawnPoint(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4738592891185217088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2794473897625555781}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.000000119209275}
+  m_LocalPosition: {x: -0.00000047683693, y: 0, z: 12.000004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 579101628372562371}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5165080024250857441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2794473897625555781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53345c1292f714a43b470d9652dbcd1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer:
+    serializedVersion: 2
+    m_Bits: 2147483648
+  HordesManagement:
+    _serializedList:
+    - Key: 0
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+  spawnInterval: 0.5
+  spawnIntervalBetweenHordes: 7
+  enemyAbstractClass: {fileID: 4243643840155893733, guid: 4544f3e5f4f2f4a4d82f147bc019cf4b, type: 3}
+  TargetToDestroy: {fileID: 0}
+--- !u!1 &3245006293595320028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5058378904777385938}
+  - component: {fileID: 6292906004971860371}
+  - component: {fileID: 5107275299685034922}
+  - component: {fileID: 2836049807429916823}
+  m_Layer: 0
+  m_Name: SpawnPoint(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5058378904777385938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3245006293595320028}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 0, y: 12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 579101628372562371}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6292906004971860371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3245006293595320028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53345c1292f714a43b470d9652dbcd1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer:
+    serializedVersion: 2
+    m_Bits: 0
+  HordesManagement:
+    _serializedList:
+    - Key: 0
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+    - Key: 1
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+    - Key: 2
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+  spawnInterval: 0.5
+  spawnIntervalBetweenHordes: 7
+  enemyAbstractClass: {fileID: 4243643840155893733, guid: 4544f3e5f4f2f4a4d82f147bc019cf4b, type: 3}
+  TargetToDestroy: {fileID: 0}
+--- !u!50 &5107275299685034922
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3245006293595320028}
+  m_BodyType: 1
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &2836049807429916823
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3245006293595320028}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!1 &6517115851059156361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2608001575001978860}
+  - component: {fileID: 726448486777790298}
+  - component: {fileID: 7872566012958571207}
+  - component: {fileID: 3271085921206508009}
+  m_Layer: 0
+  m_Name: SpawnPoint(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2608001575001978860
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6517115851059156361}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.70710695, z: -0, w: -0.7071067}
+  m_LocalPosition: {x: 0, y: -12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 579101628372562371}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &726448486777790298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6517115851059156361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53345c1292f714a43b470d9652dbcd1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer:
+    serializedVersion: 2
+    m_Bits: 0
+  HordesManagement:
+    _serializedList:
+    - Key: 0
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+    - Key: 1
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+    - Key: 2
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+  spawnInterval: 0.5
+  spawnIntervalBetweenHordes: 7
+  enemyAbstractClass: {fileID: 4243643840155893733, guid: 4544f3e5f4f2f4a4d82f147bc019cf4b, type: 3}
+  TargetToDestroy: {fileID: 0}
+--- !u!50 &7872566012958571207
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6517115851059156361}
+  m_BodyType: 1
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &3271085921206508009
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6517115851059156361}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!1 &6943396749410410305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5170466950730924298}
+  - component: {fileID: 2226533261927675710}
+  - component: {fileID: 3731069132522570360}
+  - component: {fileID: 848450642264176796}
+  m_Layer: 0
+  m_Name: SpawnPoint(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5170466950730924298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6943396749410410305}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.000000119209275, z: 0, w: -1}
+  m_LocalPosition: {x: 0.0000033378603, y: -0.0000010490734, z: -12.000004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 579101628372562371}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2226533261927675710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6943396749410410305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53345c1292f714a43b470d9652dbcd1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer:
+    serializedVersion: 2
+    m_Bits: 0
+  HordesManagement:
+    _serializedList:
+    - Key: 0
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+  spawnInterval: 0.5
+  spawnIntervalBetweenHordes: 7
+  enemyAbstractClass: {fileID: 4243643840155893733, guid: 4544f3e5f4f2f4a4d82f147bc019cf4b, type: 3}
+  TargetToDestroy: {fileID: 0}
+--- !u!50 &3731069132522570360
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6943396749410410305}
+  m_BodyType: 1
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &848450642264176796
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6943396749410410305}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!1 &7477619169438707916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1128499340221457318}
+  - component: {fileID: 8547056593780698495}
+  - component: {fileID: 6159590989179514564}
+  - component: {fileID: 4056103057068171486}
+  m_Layer: 0
+  m_Name: SpawnPoint(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1128499340221457318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7477619169438707916}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.3826833, z: 0, w: -0.9238796}
+  m_LocalPosition: {x: 0.000002026558, y: 8.485282, z: -8.485283}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 579101628372562371}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8547056593780698495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7477619169438707916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53345c1292f714a43b470d9652dbcd1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer:
+    serializedVersion: 2
+    m_Bits: 0
+  HordesManagement:
+    _serializedList:
+    - Key: 0
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+    - Key: 1
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+    - Key: 2
+      Value:
+      - enemiesEnum: 0
+        NumberOfEnemies: 3
+      - enemiesEnum: 1
+        NumberOfEnemies: 2
+      - enemiesEnum: 2
+        NumberOfEnemies: 4
+      - enemiesEnum: 0
+        NumberOfEnemies: 1
+  spawnInterval: 0.5
+  spawnIntervalBetweenHordes: 7
+  enemyAbstractClass: {fileID: 4243643840155893733, guid: 4544f3e5f4f2f4a4d82f147bc019cf4b, type: 3}
+  TargetToDestroy: {fileID: 0}
+--- !u!50 &6159590989179514564
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7477619169438707916}
+  m_BodyType: 1
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &4056103057068171486
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7477619169438707916}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!1 &8325985478528225305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 579101628372562371}
+  - component: {fileID: 8278947851661083112}
+  - component: {fileID: 6303497080152119095}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &579101628372562371
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8325985478528225305}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4738592891185217088}
+  - {fileID: 5170466950730924298}
+  - {fileID: 5058378904777385938}
+  - {fileID: 2608001575001978860}
+  - {fileID: 4601544029094061353}
+  - {fileID: 1128499340221457318}
+  - {fileID: 3369679667090701979}
+  - {fileID: 1285624941836573599}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &8278947851661083112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8325985478528225305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1454a43e3785aef45ae2247e54ed025d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPointPrefab: {fileID: 7478861309811857242, guid: 4342e05f22909704db481093a3863d4b, type: 3}
+  existingFields: 8
+  spawnPointNumber: 1
+  assumption: 16
+  distance: 12
+  spawnPoints:
+  - {fileID: 2794473897625555781}
+  - {fileID: 6943396749410410305}
+  - {fileID: 3245006293595320028}
+  - {fileID: 6517115851059156361}
+  - {fileID: 1272627318654821501}
+  - {fileID: 7477619169438707916}
+  - {fileID: 1081534811430020804}
+  - {fileID: 495522461577808466}
+  positionsList:
+  - {x: 12.000002, y: 0, z: -0.0000014305115}
+  - {x: -12.000002, y: -0.0000010490734, z: -0.0000014305115}
+  - {x: 0, y: 12, z: 0}
+  - {x: 0, y: -12, z: 0}
+  - {x: 8.485282, y: 8.485283, z: -0.0000014305115}
+  - {x: -8.485282, y: 8.485282, z: -0.0000010728836}
+  - {x: -8.485282, y: -8.485283, z: -0.0000017881393}
+  - {x: 8.485285, y: -8.48528, z: -0.0000012516975}
+  - {x: 11.126207, y: 4.49528, z: -0.0000015199184}
+  - {x: 8.63208, y: 8.335901, z: -0.0000023245811}
+  - {x: 4.8808403, y: 10.962546, z: -0.0000017881393}
+  - {x: 0.41879296, y: 11.992691, z: -0.0000021457672}
+  - {x: -4.1042414, y: 11.276313, z: -0.0000017881393}
+  - {x: -8.02957, y: 8.917739, z: -0.000002682209}
+  - {x: -10.785531, y: 5.260454, z: -0.0000021904707}
+  - {x: -11.97077, y: 0.83707774, z: -0.00000087870285}
+  - {x: -11.41268, y: -3.7082067, z: -0.0000016093254}
+  - {x: -9.1925335, y: -7.7134514, z: -0.0000002682209}
+  - {x: -5.63366, y: -10.595371, z: -0.00000035762787}
+  - {x: -1.2543397, y: -11.934266, z: -0.000002861023}
+  - {x: 3.3076534, y: -11.53514, z: -0.0000010728836}
+  - {x: 7.3879395, y: -9.456129, z: -0.0000016093254}
+  - {x: 10.392308, y: -5.9999986, z: -0.0000017881393}
+  anglesList:
+  - {x: 0, y: 0.70710677, z: 0, w: -0.7071069}
+  - {x: 0, y: -0.7071069, z: 0, w: -0.70710677}
+  - {x: 0, y: 0, z: 0, w: -1}
+  - {x: 0, y: -1, z: 0, w: 0.0000001685874}
+  - {x: 0, y: 0.38268337, z: 0, w: -0.9238796}
+  - {x: 0, y: -0.38268363, z: 0, w: -0.92387956}
+  - {x: 0, y: -0.92387956, z: 0, w: -0.38268346}
+  - {x: 0, y: -0.9238795, z: 0, w: 0.38268378}
+  - {x: 0, y: 0.5591929, z: 0, w: -0.82903767}
+  - {x: 0, y: 0.39073104, z: 0, w: -0.920505}
+  - {x: 0, y: 0.20791169, z: 0, w: -0.9781477}
+  - {x: 0, y: 0.017452294, z: 0, w: -0.99984777}
+  - {x: 0, y: -0.1736484, z: 0, w: -0.9848078}
+  - {x: 0, y: -0.35836804, z: 0, w: -0.93358046}
+  - {x: 0, y: -0.52991927, z: 0, w: -0.8480482}
+  - {x: 0, y: -0.68199843, z: 0, w: -0.7313537}
+  - {x: 0, y: -0.809017, z: 0, w: -0.58778536}
+  - {x: 0, y: -0.906308, z: 0, w: -0.42261806}
+  - {x: 0, y: -0.97029585, z: 0, w: -0.24192178}
+  - {x: 0, y: -0.9986296, z: 0, w: -0.052335728}
+  - {x: 0, y: -0.9902681, z: 0, w: 0.13917345}
+  - {x: 0, y: -0.94551855, z: 0, w: 0.32556835}
+  - {x: 0, y: -0.86602545, z: 0, w: 0.5000001}
+--- !u!114 &6303497080152119095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8325985478528225305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38273a9f0f533fe468e4c89ec9f7e524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPooling:
+    _serializedList: []
+  objectPoolingInUse:
+    _serializedList: []

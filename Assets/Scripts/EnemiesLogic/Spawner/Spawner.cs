@@ -171,6 +171,15 @@ public class Spawner : MonoBehaviour
     }
     #endregion
 
+
+    public void NewOleada()
+    {
+        for(int i = 0; i < spawnPoints.Count; i++)
+        {
+            //spawnPoints[i].s
+        }
+    }
+
     private void OnDrawGizmos()
     {
         foreach (var item in SpawnPoints)
