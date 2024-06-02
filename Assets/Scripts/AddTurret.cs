@@ -11,6 +11,8 @@ public class AddTurret : MonoBehaviour
     public bool isDragging = false;
     public bool isBlueprint = true;
 
+    [SerializeField]int buttonNumber;
+
     private void Start()
     {
         // Crear un nuevo objeto para mostrar el sprite de la torreta en el inspector
@@ -33,10 +35,17 @@ public class AddTurret : MonoBehaviour
     public void OnButtonClick()
     {
         // Si no se está arrastrando, instanciar el blueprint en la posición del ratón
+        
         if (!isDragging)
         {
             // Instanciar el prefab de la torreta
             blueprint = Instantiate(turret, Vector3.zero, Quaternion.identity);
+        ChangeButtonToTorret
+                .sharedInstanceChangeButtonToTorret
+                .buttonNumber = buttonNumber;
+            ChangeButtonToTorret
+                .sharedInstanceChangeButtonToTorret
+                .punto = blueprint;
 
             // Añadir el componente SetFixed al blueprint para manejar su fijación
             blueprint.AddComponent<SetFixed>();

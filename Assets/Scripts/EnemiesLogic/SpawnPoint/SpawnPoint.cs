@@ -22,6 +22,7 @@ public class SpawnPoint : MonoBehaviour
 
     [SerializeField] GameObject TargetToDestroy;
 
+    [SerializeField] int oleadaNumber = 0; 
 
     public GameObject TargetToDestroy1 { get => TargetToDestroy; set => TargetToDestroy = value; }
 
@@ -32,7 +33,12 @@ public class SpawnPoint : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(SpawnEnemy());
+        StartCoroutine(SpawnEnemy(oleadaNumber));
+    }
+
+    public void startCourutien( int oleadaNumber)
+    {
+        StartCoroutine(SpawnEnemy(oleadaNumber));
     }
 
     private void Update()
@@ -54,127 +60,125 @@ public class SpawnPoint : MonoBehaviour
         }
     }
 
-    IEnumerator SpawnEnemy()
+    IEnumerator SpawnEnemy(int oleadaNumber)
     {
-        for (int i = 0; i < HordesManagement.Count; i++)
+        foreach (var item in HordesManagement[oleadaNumber])
         {
-            foreach (var item in HordesManagement[i])
+            for (int j = 0; j < item.NumberOfEnemies; j++)
             {
-                for(int j = 0; j < item.NumberOfEnemies; j++)
-                {
-                    enemyAbstractClass = Resources
-                        .Load<GameObject>(item.enemiesEnum
-                        .ToString());
+                enemyAbstractClass = Resources
+                    .Load<GameObject>(item.enemiesEnum
+                    .ToString());
 
-                    /*Si el diccionario con objetos en uso
-                    ya contiene el tipo entonces*/
-                    Debug.Log(item.enemiesEnum.ToString());
+                /*Si el diccionario con objetos en uso
+                ya contiene el tipo entonces*/
+                Debug.Log(item.enemiesEnum.ToString());
+                if (EnemyObjectPooling
+                    .sharedInstanceEnemyObjectPooling
+                    .objectPoolingInUse
+                    .ContainsKey
+                    (item.enemiesEnum.ToString()))
+                {
+                    /*Si hay elementos desactivados disponibles activara uno y lo pondra en el spawnpoint*/
                     if (EnemyObjectPooling
-                        .sharedInstanceEnemyObjectPooling
-                        .objectPoolingInUse
-                        .ContainsKey
-                        (item.enemiesEnum.ToString()))
+                    .sharedInstanceEnemyObjectPooling
+                    .objectPooling[item.enemiesEnum
+                    .ToString()].Count != 0)
                     {
-                        /*Si hay elementos desactivados disponibles activara uno y lo pondra en el spawnpoint*/
-                        if (EnemyObjectPooling
+                        //enemyAbstractClass =
+                        //    EnemyObjectPooling
+                        //.sharedInstanceEnemyObjectPooling
+                        //.objectPooling[item.enemiesEnum
+                        //.ToString()][0];
+                        //
+
+                        EnemyObjectPooling
                         .sharedInstanceEnemyObjectPooling
                         .objectPooling[item.enemiesEnum
-                        .ToString()].Count != 0)
-                        {
-                            //enemyAbstractClass =
-                            //    EnemyObjectPooling
-                            //.sharedInstanceEnemyObjectPooling
-                            //.objectPooling[item.enemiesEnum
-                            //.ToString()][0];
-                            //
+                        .ToString()][0].SetActive(true);
 
-                            EnemyObjectPooling
-                            .sharedInstanceEnemyObjectPooling
-                            .objectPooling[item.enemiesEnum
-                            .ToString()][0].SetActive(true);
-
-                            EnemyObjectPooling
-                            .sharedInstanceEnemyObjectPooling
-                            .objectPooling[item.enemiesEnum
-                            .ToString()][0].transform
-                                .position =
-                                new Vector3(
-                                this.transform.position.x
-                                , this.transform.position.y
-                                , this.transform.position.z);
-                        }
-                        //si no hay elementos no activos disponibles entonces creara uno nuevo
-                        else
-                        {
-                            enemyAbstractClass
-                                .GetComponent
-                                <EnemyAbstractClass>()
-                                .EnemyType = item.enemiesEnum;
-                            enemyAbstractClass
-                                .GetComponent
-                                <EnemyAbstractClass>()
-                                .SpawnPoint = this;
-                            EnemyObjectPooling
-                            .sharedInstanceEnemyObjectPooling
-                            .objectPoolingInUse[item.enemiesEnum
-                            .ToString()].Add(
-                            Instantiate
-                                (enemyAbstractClass
-                                , transform.position
-                                , Quaternion.identity)
-                            );
-                        }
+                        EnemyObjectPooling
+                        .sharedInstanceEnemyObjectPooling
+                        .objectPooling[item.enemiesEnum
+                        .ToString()][0].transform
+                            .position =
+                            new Vector3(
+                            this.transform.position.x
+                            , this.transform.position.y
+                            , this.transform.position.z);
                     }
-                    /*Si el diccionario con objetos en uso
-                    no contiene el tipo entonces creara un 
-                    nuevo elemento en el diccionario con el 
-                    tipo y una nueva lista, tanto el 
-                    diccionario en uso como en el disponible 
-                    */
+                    //si no hay elementos no activos disponibles entonces creara uno nuevo
                     else
                     {
-                        //añade primero el tipo al enemigo
                         enemyAbstractClass
-                                .GetComponent
-                                <EnemyAbstractClass>()
-                                .EnemyType = item.enemiesEnum;
+                            .GetComponent
+                            <EnemyAbstractClass>()
+                            .EnemyType = item.enemiesEnum;
+                        enemyAbstractClass
+                            .GetComponent
+                            <EnemyAbstractClass>()
+                            .SpawnPoint = this;
                         EnemyObjectPooling
                         .sharedInstanceEnemyObjectPooling
-                        .objectPooling.Add
-                        (item.enemiesEnum.ToString()
-                        , new List<GameObject>());
+                        .objectPoolingInUse[item.enemiesEnum
+                        .ToString()].Add(
+                        Instantiate
+                            (enemyAbstractClass
+                            , transform.position
+                            , Quaternion.identity)
+                        );
+                    }
+                }
+                /*Si el diccionario con objetos en uso
+                no contiene el tipo entonces creara un 
+                nuevo elemento en el diccionario con el 
+                tipo y una nueva lista, tanto el 
+                diccionario en uso como en el disponible 
+                */
+                else
+                {
+                    //añade primero el tipo al enemigo
+                    enemyAbstractClass
+                            .GetComponent
+                            <EnemyAbstractClass>()
+                            .EnemyType = item.enemiesEnum;
+                    EnemyObjectPooling
+                    .sharedInstanceEnemyObjectPooling
+                    .objectPooling.Add
+                    (item.enemiesEnum.ToString()
+                    , new List<GameObject>());
 
-                        enemyAbstractClass
-                                .GetComponent
-                                <EnemyAbstractClass>()
-                                .SpawnPoint = this;
+                    enemyAbstractClass
+                            .GetComponent
+                            <EnemyAbstractClass>()
+                            .SpawnPoint = this;
 
-                        EnemyObjectPooling
-                        .sharedInstanceEnemyObjectPooling
-                        .objectPoolingInUse.Add
-                        (
-                            item.enemiesEnum.ToString()
-                            , new List<GameObject>
-                            {
+                    EnemyObjectPooling
+                    .sharedInstanceEnemyObjectPooling
+                    .objectPoolingInUse.Add
+                    (
+                        item.enemiesEnum.ToString()
+                        , new List<GameObject>
+                        {
                                 Instantiate
                                     (enemyAbstractClass
                                     , transform.position
                                     , Quaternion.identity)
-                            }
-                        );
-                    }
-
-                    yield return new 
-                        WaitForSeconds(spawnInterval);
+                        }
+                    );
                 }
+
                 yield return new
                     WaitForSeconds(spawnInterval);
             }
-            yield return new WaitForSeconds(spawnIntervalBetweenHordes);
+            yield return new
+                WaitForSeconds(spawnInterval);
         }
+        StopCoroutine(SpawnEnemy(oleadaNumber));
     }
-
 }
+
+
 
 public enum EnemiesEnum
 {
