@@ -18,6 +18,8 @@ public class EnemyAbstractClass : MonoBehaviour
 
     [SerializeField] NavMeshAgent agent;
 
+    [SerializeField] GameObject target;
+
 
     public int MaxLife { get => maxLife; set => maxLife = value; }
     public int Life { get => life; set => life = value; }
@@ -28,8 +30,12 @@ public class EnemyAbstractClass : MonoBehaviour
 
     void Start()
     {
-        agent.SetDestination((Vector2)spawnPoint
-            .TargetToDestroy1.transform.position);
+        target = spawnPoint.TargetToDestroy1;
+        agent.SetDestination(new Vector2 
+            (target
+            .transform.position.x + 1
+            , target
+            .transform.position.y));
         BUMaxLife = MaxLife;
         BULife = Life;
     }
@@ -54,19 +60,36 @@ public class EnemyAbstractClass : MonoBehaviour
 
     void Update()
     {
-        if (!agent.hasPath)
+        if (gameObject.GetComponent<NavMeshAgent>()
+                .enabled == true)
         {
-            if ((Vector2)agent.transform.position != (Vector2)spawnPoint
-                .TargetToDestroy1.transform.position)
+            if (agent.remainingDistance <= 0.5f)
             {
-                agent.SetDestination((Vector2)spawnPoint
-                .TargetToDestroy1.transform.position);
+                agent.isStopped = true;
+                agent.enabled = false;
             }
-            if (Life <= 0)
-            {
-                this.gameObject.SetActive(false);
-            }
+
+        }
+        
+        if (target == null)
+        {
+            //Debug.Log();
+            agent.enabled = true;
+            target = spawnPoint.TargetToDestroy1;
+            agent.SetDestination(new Vector2
+                (
+                target
+                .transform.position.x + 1
+                , target
+                .transform.position.y
+                ));
         }
     }
-    
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Defensa"))
+    //    {
+    //        agent.isStopped = true;
+    //    }
+    //}
 }
