@@ -5,12 +5,11 @@ using UnityEngine;
 public class SetFixed : MonoBehaviour
 {
     public bool fix = false;
-    public bool ancla = false;// Variable pública para indicar si el objeto está fijado
 
     private void Update()
     {
         // Si el objeto no está fijado, actualizar su posición a la posición del ratón
-        if (!fix && ancla)
+        if (!fix)
         {
 
             // Obtener la posición del ratón en coordenadas del mundo
@@ -39,19 +38,4 @@ public class SetFixed : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "ancla")
-        {
-            ancla = true;
-        }
-    }
-
-    public void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "ancla")
-        {
-            ancla = false;
-        }
-    }
 }
