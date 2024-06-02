@@ -74,7 +74,6 @@ public class turretBehaviour : MonoBehaviour
                     bulletScript.SetDirection(parentTransform.right); // Using right direction relative to parentTransform
                 }
 
-            
         }
     }
 }

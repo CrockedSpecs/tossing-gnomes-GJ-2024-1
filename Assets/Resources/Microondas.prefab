@@ -54,6 +54,7 @@ MonoBehaviour:
   bULife: 100
   spawnPoint: {fileID: 0}
   agent: {fileID: 2767007896205555500}
+  target: {fileID: 0}
 --- !u!50 &202587332205797980
 Rigidbody2D:
   serializedVersion: 4
@@ -125,7 +126,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 8292933774900293174}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.2
+  m_Radius: 0.05
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
