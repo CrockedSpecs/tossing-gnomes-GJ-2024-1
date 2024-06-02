@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: -3824970291347431189}
   - component: {fileID: 202587332205797980}
   - component: {fileID: -6084814427778447256}
-  - component: {fileID: 2767007896205555500}
   m_Layer: 0
   m_Name: Microondas
   m_TagString: Enemy
@@ -48,13 +47,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 1
-  maxLife: 100
-  life: 100
-  bUMaxLife: 100
-  bULife: 100
+  maxLife: 3
+  life: 3
+  bUMaxLife: 3
+  bULife: 3
+  shootRate: 3
   spawnPoint: {fileID: 0}
-  agent: {fileID: 2767007896205555500}
+  agent: {fileID: 0}
   target: {fileID: 0}
+  speed: 0.05
 --- !u!50 &202587332205797980
 Rigidbody2D:
   serializedVersion: 4
@@ -117,25 +118,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!195 &2767007896205555500
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8292933774900293174}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.05
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4

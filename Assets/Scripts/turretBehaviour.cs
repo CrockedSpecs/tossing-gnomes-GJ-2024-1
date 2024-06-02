@@ -36,6 +36,10 @@ public class turretBehaviour : MonoBehaviour
         {
             isShooting = false;
         }
+        if (life <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
