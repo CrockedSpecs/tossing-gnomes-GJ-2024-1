@@ -35,7 +35,7 @@ public class SpawnPoint : MonoBehaviour
         StartCoroutine(SpawnEnemy());
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (TargetToDestroy1 == null || !TargetToDestroy1
             .activeInHierarchy)
@@ -50,10 +50,7 @@ public class SpawnPoint : MonoBehaviour
                 , direction.magnitude
                 , layer);
             Debug.DrawRay((Vector2)this.transform.position, direction, Color.blue);
-            TargetToDestroy1 = hit.collider.gameObject;
-
-
-            
+            TargetToDestroy1 = hit.collider.gameObject; 
         }
     }
 

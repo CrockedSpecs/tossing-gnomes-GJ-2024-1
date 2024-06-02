@@ -156,16 +156,28 @@ MonoBehaviour:
   spawnPointPrefab: {fileID: 7478861309811857242, guid: 4342e05f22909704db481093a3863d4b, type: 3}
   existingFields: 1
   spawnPointNumber: 1
-  assumption: 2
+  assumption: 8
   distance: 12
   spawnPoints:
   - {fileID: 2006838742}
   positionsList:
   - {x: 12.000002, y: 0, z: -0.0000014305115}
   - {x: -12.000002, y: -0.0000010490734, z: -0.0000014305115}
+  - {x: 0, y: 12, z: 0}
+  - {x: 0, y: -12, z: 0}
+  - {x: 8.485282, y: 8.485283, z: -0.0000014305115}
+  - {x: -8.485282, y: 8.485282, z: -0.0000010728836}
+  - {x: -8.485282, y: -8.485283, z: -0.0000017881393}
+  - {x: 8.485285, y: -8.48528, z: -0.0000012516975}
   anglesList:
   - {x: 0, y: 0.70710677, z: 0, w: -0.7071069}
   - {x: 0, y: -0.7071069, z: 0, w: -0.70710677}
+  - {x: 0, y: 0, z: 0, w: -1}
+  - {x: 0, y: -1, z: 0, w: 0.0000001685874}
+  - {x: 0, y: 0.38268337, z: 0, w: -0.9238796}
+  - {x: 0, y: -0.38268363, z: 0, w: -0.92387956}
+  - {x: 0, y: -0.92387956, z: 0, w: -0.38268346}
+  - {x: 0, y: -0.9238795, z: 0, w: 0.38268378}
 --- !u!4 &223489282
 Transform:
   m_ObjectHideFlags: 0
@@ -220,7 +232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1285235462829815620, guid: 30ec069c95fa457468c7c68a52b5035c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.09
+      value: 4.86
       objectReference: {fileID: 0}
     - target: {fileID: 1285235462829815620, guid: 30ec069c95fa457468c7c68a52b5035c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -266,6 +278,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 346447635
       objectReference: {fileID: 0}
+    - target: {fileID: 8465019625753534054, guid: 30ec069c95fa457468c7c68a52b5035c, type: 3}
+      propertyPath: life
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8528605116079438682, guid: 30ec069c95fa457468c7c68a52b5035c, type: 3}
       propertyPath: m_Name
       value: turretBasic
@@ -273,6 +289,10 @@ PrefabInstance:
     - target: {fileID: 8528605116079438682, guid: 30ec069c95fa457468c7c68a52b5035c, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528605116079438682, guid: 30ec069c95fa457468c7c68a52b5035c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8528605116079438682, guid: 30ec069c95fa457468c7c68a52b5035c, type: 3}
       propertyPath: m_TagString
@@ -573,7 +593,7 @@ Transform:
   m_GameObject: {fileID: 594721640}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.28681675, w: 0.9579855}
-  m_LocalPosition: {x: -1.09, y: -1.03, z: -0.048868936}
+  m_LocalPosition: {x: 0.75, y: 0.79, z: -0.048868936}
   m_LocalScale: {x: 1.3621207, y: 0.19821514, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -840,7 +860,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.022054076, y: -0.016540557}
+  m_Offset: {x: 0.19914377, y: -0.016540527}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -851,7 +871,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5734036, y: 1.5182683}
+  m_Size: {x: 1.927583, y: 1.5182683}
   m_EdgeRadius: 0
 --- !u!50 &788547142
 Rigidbody2D:
@@ -922,7 +942,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.3016491, y: 0}
+  m_Offset: {x: 1.161876, y: -0.006988585}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -933,7 +953,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.6032977, y: 1}
+  m_Size: {x: 3.882844, y: 1.5171607}
   m_EdgeRadius: 0
 --- !u!50 &986934811
 Rigidbody2D:
