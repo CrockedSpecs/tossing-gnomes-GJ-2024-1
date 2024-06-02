@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class SetFixed : MonoBehaviour
 {
-    public bool fix = false; // Variable pública para indicar si el objeto está fijado
+    public bool fix = false;
 
     private void Update()
     {
         // Si el objeto no está fijado, actualizar su posición a la posición del ratón
         if (!fix)
         {
+
             // Obtener la posición del ratón en coordenadas del mundo
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = 0f; // Asegurarse de que la coordenada z sea cero
@@ -36,4 +37,5 @@ public class SetFixed : MonoBehaviour
             fix = true;
         }
     }
+
 }

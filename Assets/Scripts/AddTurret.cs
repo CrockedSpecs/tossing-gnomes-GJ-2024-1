@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class AddTurret : MonoBehaviour
 {
     public GameObject turret; // Prefab de la torreta que se añadirá
@@ -30,7 +30,7 @@ public class AddTurret : MonoBehaviour
         showThis.transform.position = transform.position;
     }
 
-    private void OnMouseDown()
+    public void OnButtonClick()
     {
         // Si no se está arrastrando, instanciar el blueprint en la posición del ratón
         if (!isDragging)
