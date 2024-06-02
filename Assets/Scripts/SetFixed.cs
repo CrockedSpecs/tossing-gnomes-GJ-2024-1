@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class SetFixed : MonoBehaviour
 {
-    public bool fix = false; // Variable pública para indicar si el objeto está fijado
+    public bool fix = false;
+    public bool ancla = false;// Variable pública para indicar si el objeto está fijado
 
     private void Update()
     {
         // Si el objeto no está fijado, actualizar su posición a la posición del ratón
-        if (!fix)
+        if (!fix && ancla)
         {
+
             // Obtener la posición del ratón en coordenadas del mundo
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = 0f; // Asegurarse de que la coordenada z sea cero
@@ -34,6 +36,22 @@ public class SetFixed : MonoBehaviour
 
             // Fijar el objeto
             fix = true;
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "ancla")
+        {
+            ancla = true;
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "ancla")
+        {
+            ancla = false;
         }
     }
 }
